@@ -1,3 +1,5 @@
+/* style.css */
+
 /* Le container principal qui aligne les colonnes horizontalement */
 .loader {
     display: flex;                      /* Utilisation du modèle de boîte flexbox pour aligner les éléments */
