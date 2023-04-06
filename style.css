@@ -1,0 +1,56 @@
+/* Le container principal qui aligne les colonnes horizontalement */
+.loader {
+    display: flex;                      /* Utilisation du modèle de boîte flexbox pour aligner les éléments */
+    align-items: center;                /* Centrage vertical des éléments */
+    justify-content: center;            /* Centrage horizontal des éléments */
+    flex-direction: row;                /* Orientation des éléments en rangée horizontale */
+}
+
+/* Le style de base pour les éléments graphiques (jauge) */
+.slider {
+    overflow: hidden;                   /* Cache les parties débordantes de l'élément */
+    background-color: white;          /* Couleur de fond de l'élément */
+    margin: 0 15px;                     /* Marges pour espacer les éléments graphiques horizontalement */
+    height: 80px;                       /* Hauteur de l'élément graphique */
+    width: 20px;                        /* Largeur de l'élément graphique */
+    border-radius: 30px;                /* Rayon des coins pour arrondir les coins */
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 30px #fff,
+        inset -5px -5px 10px rgba(0, 0, 255, 0.1),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.1);  /* Ombres portées et internes pour donner un effet de profondeur */
+    position: relative;             /* Positionnement relatif pour positionner correctement les éléments enfants */
+}
+
+/* Le style pour le fluide à l'intérieur de l'élément graphique */
+.slider::before {
+    content: "";                        /* Génère un contenu vide pour créer un pseudo-élément */
+    position: absolute;                 /* Positionnement absolu par rapport à l'élément graphique parent */
+    /*bottom: calc(80px * (1 - var(--fill-level) / 10)); /* Positionnement vertical basé sur le niveau de remplissage */
+    bottom: 0;
+    left: 0;                            /* Positionnement horizontal à gauche */
+    height: calc(20px + 60px * var(--fill-level) / 10); /* Hauteur du fluide */
+    width: 20px;                        /* Largeur du fluide */
+    border-radius: 30px;                /* Rayon des coins pour créer un cercle */
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 420px 0 400px var(--final-color),
+        inset 0px 0px 0px rgba(0, 0, 0, 0.1);  /* Ombres internes et débordantes pour créer l'effet de fluide */
+    animation: var(--animation-name) calc(2.5s * var(--fill-level) / 10) ease-in-out forwards;  /* Animation pour le mouvement du fluide */
+    /*animation-delay: calc(0.5s * var(--i));     /* Si la ligne est décommenté un fluide bleu est déjà là */
+}
+
+
+/* Le conteneur pour les colonnes individuelles (éléments graphiques et titres) */
+.column {
+    display: flex;                      /* Utilisation du modèle de boîte flexbox pour aligner les éléments */
+    flex-direction: column;             /* Orientation des éléments en colonne verticale */
+    align-items: center;                /* Centrage horizontal des éléments */
+}
+
+/* Le style pour les titres sous les éléments graphiques */
+.title {
+    margin-left: 4px;
+    margin-top: 10px;                   /* Marge supérieure pour espacer le titre de l'élément graphique */
+    text-align: center;                 /* Centrage horizontal du texte */
+    white-space: nowrap;                /* Empêche le texte de passer à la ligne */
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
