@@ -66,6 +66,7 @@
     font-family: 'Montserrat', sans-serif;
     color: #333;
     line-height: 1.6;
+    font-size: 13px;
 }
 
 
@@ -80,7 +81,7 @@
     padding: 0.25rem;
     width: 300px;
     font-size: 14px;
-    
+    color:#0066ff;
 }
 
 .radio-inputs .radio {

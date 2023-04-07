@@ -58,7 +58,7 @@ function shuffle(array) {
   return array;
 }
 
-const sliderCount = 16; // Nom de sliders en tout !
+const sliderCount = 22; // Nom de sliders en tout !
 const randomOrder = shuffle(Array.from({ length: sliderCount }, (_, i) => i));
 
 for (let i = 0; i < sliderCount; i++) {
@@ -67,11 +67,12 @@ for (let i = 0; i < sliderCount; i++) {
 }
 
 const colors = {
-  "Front-end": "#0066ff",
-  "Back-end": "#00cc99",
-  "BDD": "#ff9933",
-  "Autres": "#ff3399",
+  "Front-end": "#ff7f7f", // rouge vif
+  "Back-end": "#6699cc", // bleu vif
+  "BDD": "#ffa64d", // orange vif
+  "Autres": "#a052a0", // violet moins intense
 };
+
 
 for (let i = 0; i < sliderCount; i++) {
   const slider = document.getElementById(`slider-${i}`);
