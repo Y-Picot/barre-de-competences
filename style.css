@@ -1,10 +1,20 @@
 /* style.css */
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 0;
+}
+
+
 /* Le container principal qui aligne les colonnes horizontalement */
-.loader {
+.competences {
     display: flex;                      /* Utilisation du modèle de boîte flexbox pour aligner les éléments */
     align-items: center;                /* Centrage vertical des éléments */
-    justify-content: center;            /* Centrage horizontal des éléments */
+    justify-content: left;            /* Centrage horizontal des éléments */
     flex-direction: row;                /* Orientation des éléments en rangée horizontale */
 }
 
@@ -44,6 +54,7 @@
     display: flex;                      /* Utilisation du modèle de boîte flexbox pour aligner les éléments */
     flex-direction: column;             /* Orientation des éléments en colonne verticale */
     align-items: center;                /* Centrage horizontal des éléments */
+    margin-top: 10px;                   /* Ajout d'une marge supérieure pour espacer les tubes des radio-boutons */
 }
 
 /* Le style pour les titres sous les éléments graphiques */
@@ -55,4 +66,45 @@
     font-family: 'Montserrat', sans-serif;
     color: #333;
     line-height: 1.6;
+}
+
+
+.radio-inputs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #EEE;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 300px;
+    font-size: 14px;
+    
+}
+
+.radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.radio-inputs .radio input {
+    display: none;
+}
+
+.radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: rgba(51, 65, 85, 1);
+    transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked+.name {
+    background-color: #fff;
+    font-weight: 600;
 }
