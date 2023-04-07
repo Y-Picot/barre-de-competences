@@ -44,7 +44,7 @@
     border-radius: 30px;                /* Rayon des coins pour créer un cercle */
     box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 420px 0 400px var(--final-color),
         inset 0px 0px 0px rgba(0, 0, 0, 0.1);  /* Ombres internes et débordantes pour créer l'effet de fluide */
-    animation: var(--animation-name) calc(4s * var(--fill-level) / 10) ease-in-out forwards;  /* Animation pour le mouvement du fluide */
+    animation: var(--animation-name) calc(3s * var(--fill-level) / 10) ease-in-out forwards;  /* Animation pour le mouvement du fluide */
     /*animation-delay: calc(0.5s * var(--i));     /* Si la ligne est décommenté un fluide bleu est déjà là */
 }
 
