@@ -30,6 +30,7 @@
         inset -5px -5px 10px rgba(0, 0, 255, 0.1),
         inset 5px 5px 10px rgba(0, 0, 0, 0.1);  /* Ombres portées et internes pour donner un effet de profondeur */
     position: relative;             /* Positionnement relatif pour positionner correctement les éléments enfants */
+    --fill-level: 5; /* Juste un exemple, changez cette valeur comme vous voulez */
 }
 
 /* Le style pour le fluide à l'intérieur de l'élément graphique */
@@ -39,8 +40,8 @@
     /*bottom: calc(80px * (1 - var(--fill-level) / 10)); /* Positionnement vertical basé sur le niveau de remplissage */
     bottom: 0;
     left: 0;                            /* Positionnement horizontal à gauche */
-    height: calc(40px + 120px * var(--fill-level) / 10); /* Hauteur du fluide */
-    width: 40px;                        /* Largeur du fluide */
+    height: calc(10% + 90% * var(--fill-level) / 10); /* Hauteur du fluide */
+    width: 100%; /* Largeur du fluide */
     border-radius: 30px;                /* Rayon des coins pour créer un cercle */
     box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 420px 0 400px var(--final-color),
         inset 0px 0px 0px rgba(0, 0, 0, 0.1);  /* Ombres internes et débordantes pour créer l'effet de fluide */
@@ -108,4 +109,65 @@
 .radio-inputs .radio input:checked+.name {
     background-color: #fff;
     font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .competences {
+        flex-wrap: wrap;
+    }
+    .column {
+        margin-bottom: 20px;
+    }
+
+    .slider::before {
+        height: calc(5% + 95% * var(--fill-level) / 10); /* Hauteur du fluide */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 20px 0;
+    }
+
+    .slider {
+        height: 120px;
+        width: 30px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .radio-inputs {
+        width: 350px;
+        font-size: 16px;
+    }
+
+    .slider::before {
+        height: calc(2.5% + 97.5% * var(--fill-level) / 10); /* Hauteur du fluide */
+    }
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        padding: 10px 0;
+    }
+
+    .slider {
+        height: 100px;
+        width: 20px;
+    }
+
+    .title {
+        font-size: 10px;
+    }
+
+    .radio-inputs {
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .slider::before {
+        height: calc(1% + 99% * var(--fill-level) / 10); /* Hauteur du fluide */
+    }
 }
