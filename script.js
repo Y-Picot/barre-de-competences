@@ -22,7 +22,6 @@ function shuffle(array) {
 
 const sliderCount = 22; // Nombre de sliders en tout !
 const randomOrder = shuffle(Array.from({ length: sliderCount }, (_, i) => i));
-// console.log("random : " + randomOrder);
 
 for (let i = 0; i < sliderCount; i++) {
   const slider = document.getElementById(`slider-${i}`);
@@ -41,7 +40,6 @@ for (let i = 0; i < sliderCount; i++) {
   const slider = document.getElementById(`slider-${i}`);
   const category = slider.getAttribute("data-category");
   const finalColor = colors[category];
-
 
   // Modification des couleurs tout au longs du remplissage des fioles jusqu'à la couleur finale
   const animationCSS = `
