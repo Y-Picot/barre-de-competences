@@ -1,6 +1,6 @@
 // script.js
 
-// Mélange des élèments d'un array grâve à la fonction random()
+// Mélange des élèments d'un array grâce à la fonction random()
 function shuffle(array) {
   let currentIndex = array.length,
     temporaryValue,
@@ -18,7 +18,7 @@ function shuffle(array) {
   return array;
 }
 
-// Fioles / Tubes affichage
+// Initialisation des animations des fioles / tubes
 
 const sliderCount = 22; // Nombre de sliders en tout !
 const randomOrder = shuffle(Array.from({ length: sliderCount }, (_, i) => i));
@@ -93,14 +93,30 @@ function updateDisplay() {
     const slider = column.querySelector(".slider");
     const category = slider.getAttribute("data-category");
 
+    // Supprimer les classes précédentes de tous les titres
+    const title = column.querySelector('.title');
+    title.classList.remove('gold', 'silver', 'bronze');
+
+    // Gestion de l'affichage des compétences 5 max des meilleures de la catégories
     if (category === selectedCategory) {
       if (count < 5) {
         column.style.display = "flex";
         count++;
+
+        // Mise en valeurs des trois meilleures compétences de la catégories
+        if (count === 1) {
+          title.classList.add('gold');
+        } else if (count === 2) {
+          title.classList.add('silver');
+        } else if (count === 3) {
+          title.classList.add('bronze');
+        }
       } else {
         column.style.display = "none";
       }
-    } else {
+    }
+
+    else {
       column.style.display = "none";
     }
   });
@@ -134,4 +150,4 @@ function reinitialisation_tubes_compétences() {
 setInterval(() => {
   reinitialisation_tubes_compétences();
   console.log("test");
-}, 2500)
+}, 4000)
