@@ -150,4 +150,4 @@ function reinitialisation_tubes_compétences() {
 setInterval(() => {
   reinitialisation_tubes_compétences();
   console.log("test");
-}, 4000)
+}, 8000)
