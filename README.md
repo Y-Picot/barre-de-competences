@@ -12,11 +12,11 @@ Ce projet est une interface interactive permettant de visualiser et de trier des
 
 1. Clonez ce repository :
    ```bash
-   git clone https://github.com/username/skill-bar-application.git
+   git clone https://github.com/Y-Picot/barre-de-competences.git
    ```
 2. Accédez au dossier du projet :
    ```bash
-   cd skill-bar-application
+   cd barre-de-competences
    ```
 3. Ouvrez le fichier `index.html` dans votre navigateur pour voir le projet en action.
 
