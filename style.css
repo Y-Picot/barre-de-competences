@@ -21,7 +21,7 @@
     Section des compétences :
     Aligne les colonnes horizontalement et gère leur disposition.
 */
-.competences {
+.skills {
     display: flex;                      /* Utilisation du modèle de boîte flexbox pour aligner les éléments */
     align-items: center;                /* Centrage vertical des éléments */
     justify-content: left;              /* Centrage horizontal des éléments */
@@ -50,11 +50,10 @@
 .slider::before {
     content: "";                        /* Génère un contenu vide pour créer un pseudo-élément */
     position: absolute;                 /* Positionnement absolu par rapport à l'élément graphique parent */
-    /*bottom: calc(80px * (1 - var(--fill-level) / 10)); /* Positionnement vertical basé sur le niveau de remplissage */
     bottom: 0;
     left: 0;                            /* Positionnement horizontal à gauche */
     height: calc(10% + 90% * var(--fill-level) / 10); /* Hauteur du fluide */
-    width: 100%; /* Largeur du fluide */
+    width: 100%;                        /* Largeur du fluide */
     border-radius: 30px;                /* Rayon des coins pour créer un cercle */
     box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 420px 0 400px var(--final-color),
         inset 0px 0px 0px rgba(0, 0, 0, 0.1);  /* Ombres internes et débordantes pour créer l'effet de fluide */
@@ -178,7 +177,7 @@
 }
 
 @media (max-width: 1200px) {
-    .competences {
+    .skills {
         flex-wrap: wrap;
     }
     .column {
