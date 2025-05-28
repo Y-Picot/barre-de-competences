@@ -63,7 +63,7 @@ Les contributions sont les bienvenues ! Veuillez suivre les étapes suivantes :
 
 ## Origine du projet
 
-Ce projet a été réadapté d'un code open source disponible à l'URL suivante : [uiverse.io/Nawsome/brave-turtle-26](https://uiverse.io/Nawsome/brave-turtle-26).
+Ce projet a été réadapté de deux code open source disponible à l'URL suivante : [uiverse.io/Nawsome/brave-turtle-26](https://uiverse.io/Nawsome/brave-turtle-26) et [uiverse.io/Yaya12085/orange-eagle-19](https://uiverse.io/Yaya12085/orange-eagle-19). 
 
 ## Licence
 
