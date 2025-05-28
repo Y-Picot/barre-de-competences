@@ -1,5 +1,12 @@
-/* style.css */
+/* style.css
+   Ce fichier contient les styles pour l'interface utilisateur de l'application.
+   Chaque section est documentée pour expliquer son rôle.
+*/
 
+/*
+    Conteneur principal :
+    Centre le contenu verticalement et horizontalement.
+*/
 .main-container {
     display: flex;
     flex-direction: column;
@@ -10,7 +17,10 @@
 }
 
 
-/* Le container principal qui aligne les colonnes horizontalement */
+/*
+    Section des compétences :
+    Aligne les colonnes horizontalement et gère leur disposition.
+*/
 .competences {
     display: flex;                      /* Utilisation du modèle de boîte flexbox pour aligner les éléments */
     align-items: center;                /* Centrage vertical des éléments */
@@ -18,7 +28,10 @@
     flex-direction: row;                /* Orientation des éléments en rangée horizontale */
 }
 
-/* Le style de base pour les éléments graphiques (jauge) */
+/*
+    Style des jauges :
+    Définit l'apparence des jauges et leur animation.
+*/
 .slider {
     overflow: hidden;                   /* Cache les parties débordantes de l'élément */
     background-color: white;          /* Couleur de fond de l'élément */
@@ -49,7 +62,9 @@
 }
 
 
-/* Le conteneur pour les colonnes individuelles (éléments graphiques et titres) */
+/*
+    Le conteneur pour les colonnes individuelles (éléments graphiques et titres)
+*/
 .column {
     display: flex;                      /* Utilisation du modèle de boîte flexbox pour aligner les éléments */
     flex-direction: column;             /* Orientation des éléments en colonne verticale */
@@ -57,7 +72,10 @@
     margin-top: 10px;                   /* Ajout d'une marge supérieure pour espacer les tubes des radio-boutons */
 }
 
-/* Le style pour les titres sous les éléments graphiques */
+/*
+    Style des titres :
+    Définit l'apparence des titres sous les jauges.
+*/
 .title {
     margin-left: 4px;
     margin-top: 10px;                   /* Marge supérieure pour espacer le titre de l'élément graphique */
@@ -115,7 +133,10 @@
     animation: animation_bronze 3s forwards;
   }
 
-/* Menu des catégories */
+/*
+    Menu des catégories :
+    Définit l'apparence des boutons radio pour sélectionner une catégorie.
+*/
 .radio-inputs {
     position: relative;
     display: flex;

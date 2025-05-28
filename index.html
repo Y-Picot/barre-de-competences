@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Application de Barre de Compétences</title> <!-- Titre mis à jour pour refléter un projet professionnel -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!--
+        index.html
+        Ce fichier contient la structure HTML principale de l'application.
+        Chaque section est documentée pour expliquer son rôle dans le projet.
+    -->
+
     <div class="main-container">
+        <!--
+            Section des boutons radio :
+            Permet de sélectionner une catégorie de compétences (Front-end, Back-end, etc.).
+        -->
         <div class="radio-inputs">
             <label class="radio">
                 <input type="radio" name="radio" data-category="Front-end" checked>
@@ -24,20 +34,25 @@
 
             <label class="radio">
                 <input type="radio" name="radio" data-category="BDD">
-                <span class="name">Bdd</span>
+                <span class="name">Base de Données</span> <!-- Mis à jour en français -->
             </label>
             <label class="radio">
-                <input type="radio" name="radio" data-category="Autres">
-                <span class="name">Autres</span>
+                <input type="radio" name="radio" data-category="Other">
+                <span class="name">Autres</span> <!-- Mis à jour en français -->
             </label>
         </div>
 
-        <section class="competences">
+        <!--
+            Section des compétences :
+            Contient les colonnes représentant chaque compétence avec son niveau.
+            Les colonnes sont triées et affichées dynamiquement via JavaScript.
+        -->
+        <section class="skills">
 
-            <!-- Front-end -->
+            <!-- Compétences Front-end -->
             <div class="column">
                 <div class="slider" id="slider-0" style="--fill-level: 8" data-category="Front-end"></div>
-                <div class="title">Javascript</div>
+                <div class="title">JavaScript</div>
             </div>
             <div class="column">
                 <div class="slider" id="slider-1" style="--fill-level: 6" data-category="Front-end"></div>
@@ -45,93 +60,131 @@
             </div>
             <div class="column">
                 <div class="slider" id="slider-2" style="--fill-level: 8" data-category="Front-end"></div>
-                <div class="title">JavaSwing</div>
+                <div class="title">Java Swing</div>
             </div>
             <div class="column">
                 <div class="slider" id="slider-3" style="--fill-level: 7" data-category="Front-end"></div>
-                <div class="title">QtCreator</div>
+                <div class="title">Qt Creator</div>
             </div>
             <div class="column">
                 <div class="slider" id="slider-4" style="--fill-level: 7" data-category="Front-end"></div>
                 <div class="title">Django</div>
             </div>
-
-            <!-- Autres -->
             <div class="column">
-                <div class="slider" id="slider-5" style="--fill-level: 4" data-category="Autres"></div>
-                <div class="title">PhotoShop</div>
+                <div class="slider" id="slider-5" style="--fill-level: 9" data-category="Front-end"></div>
+                <div class="title">React</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-6" style="--fill-level: 8" data-category="Autres"></div>
+                <div class="slider" id="slider-6" style="--fill-level: 7" data-category="Front-end"></div>
+                <div class="title">Vue.js</div>
+            </div>
+
+            <!-- Compétences Autres -->
+            <div class="column">
+                <div class="slider" id="slider-7" style="--fill-level: 4" data-category="Other"></div>
+                <div class="title">Photoshop</div>
+            </div>
+            <div class="column">
+                <div class="slider" id="slider-8" style="--fill-level: 8" data-category="Other"></div>
                 <div class="title">Notion</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-7" style="--fill-level: 7" data-category="Autres"></div>
-                <div class="title">GitLabEE</div>
+                <div class="slider" id="slider-9" style="--fill-level: 7" data-category="Other"></div>
+                <div class="title">GitLab EE</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-8" style="--fill-level: 10" data-category="Autres"></div>
-                <div class="title">ChatGPT4</div>
+                <div class="slider" id="slider-10" style="--fill-level: 10" data-category="Other"></div>
+                <div class="title">ChatGPT 4</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-9" style="--fill-level: 9" data-category="Autres"></div>
+                <div class="slider" id="slider-11" style="--fill-level: 9" data-category="Other"></div>
                 <div class="title">Maven</div>
             </div>
-
-            <!-- Back-end -->
             <div class="column">
-                <div class="slider" id="slider-10" style="--fill-level: 6" data-category="Back-end"></div>
+                <div class="slider" id="slider-12" style="--fill-level: 5" data-category="Other"></div>
+                <div class="title">Figma</div>
+            </div>
+            <div class="column">
+                <div class="slider" id="slider-13" style="--fill-level: 6" data-category="Other"></div>
+                <div class="title">Trello</div>
+            </div>
+
+            <!-- Compétences Back-end -->
+            <div class="column">
+                <div class="slider" id="slider-14" style="--fill-level: 6" data-category="Back-end"></div>
                 <div class="title">C#</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-13" style="--fill-level: 9" data-category="Back-end"></div>
+                <div class="slider" id="slider-15" style="--fill-level: 9" data-category="Back-end"></div>
                 <div class="title">Python</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-11" style="--fill-level: 9" data-category="Back-end"></div>
+                <div class="slider" id="slider-16" style="--fill-level: 9" data-category="Back-end"></div>
                 <div class="title">JAVA</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-12" style="--fill-level: 7" data-category="Back-end"></div>
+                <div class="slider" id="slider-17" style="--fill-level: 7" data-category="Back-end"></div>
                 <div class="title">C++</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-14" style="--fill-level: 5" data-category="Back-end"></div>
+                <div class="slider" id="slider-18" style="--fill-level: 5" data-category="Back-end"></div>
                 <div class="title">C</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-15" style="--fill-level: 6" data-category="Back-end"></div>
+                <div class="slider" id="slider-19" style="--fill-level: 6" data-category="Back-end"></div>
                 <div class="title">VB.net</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-16" style="--fill-level: 7" data-category="Back-end"></div>
+                <div class="slider" id="slider-20" style="--fill-level: 7" data-category="Back-end"></div>
                 <div class="title">.Diva</div>
             </div>
-            <!-- Base de données -->
             <div class="column">
-                <div class="slider" id="slider-17" style="--fill-level: 7" data-category="BDD"></div>
+                <div class="slider" id="slider-21" style="--fill-level: 8" data-category="Back-end"></div>
+                <div class="title">Node.js</div>
+            </div>
+            <div class="column">
+                <div class="slider" id="slider-22" style="--fill-level: 7" data-category="Back-end"></div>
+                <div class="title">Ruby on Rails</div>
+            </div>
+
+            <!-- Compétences Base de Données -->
+            <div class="column">
+                <div class="slider" id="slider-23" style="--fill-level: 7" data-category="BDD"></div>
                 <div class="title">MSSQL</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-18" style="--fill-level: 8" data-category="BDD"></div>
+                <div class="slider" id="slider-24" style="--fill-level: 8" data-category="BDD"></div>
                 <div class="title">MySQL</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-19" style="--fill-level: 6" data-category="BDD"></div>
+                <div class="slider" id="slider-25" style="--fill-level: 6" data-category="BDD"></div>
                 <div class="title">T-SQL</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-20" style="--fill-level: 7" data-category="BDD"></div>
+                <div class="slider" id="slider-26" style="--fill-level: 7" data-category="BDD"></div>
                 <div class="title">PostgreSQL</div>
             </div>
             <div class="column">
-                <div class="slider" id="slider-21" style="--fill-level: 6" data-category="BDD"></div>
+                <div class="slider" id="slider-27" style="--fill-level: 6" data-category="BDD"></div>
                 <div class="title">NoSQL</div>
+            </div>
+            <div class="column">
+                <div class="slider" id="slider-28" style="--fill-level: 9" data-category="BDD"></div>
+                <div class="title">MongoDB</div>
+            </div>
+            <div class="column">
+                <div class="slider" id="slider-29" style="--fill-level: 8" data-category="BDD"></div>
+                <div class="title">Firebase</div>
             </div>
 
         </section>
     </div>
+
+    <!--
+        Inclusion du fichier JavaScript :
+        Contient la logique pour les animations et interactions.
+    -->
+    <script src="script.js"></script>
 </body>
 
 </html>
-<script src="script.js"></script>
